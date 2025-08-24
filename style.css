@@ -1,0 +1,29 @@
+.container {
+  max-width: 480px;
+  background: color #f5fffa;
+
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+footer {
+  text-align: center;
+}
+.date {
+  display: flex;
+  justify-content: space-between;
+}
+.country {
+  width: 97%;
+  padding: 5px 5px;
+  border-radius: 10px;
+  font-size: 25px;
+}
+.time {
+  margin-top: 40px;
+  font-weight: 800;
+  font-size: 25px;
+}
+body {
+  background-color: beige;
+}
