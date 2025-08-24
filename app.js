@@ -15,7 +15,8 @@ function watch() {
   let zonee1 = moment().tz("Australia/Sydney").format("HH:mm:ss A");
   time1.innerHTML = zonee1;
 }
-watch();
+setInterval(watch, 1000);
+
 function change(event) {
   let countryy = event.target.value;
   place.innerHTML = countryy;
