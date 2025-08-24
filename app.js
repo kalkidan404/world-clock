@@ -19,10 +19,16 @@ setInterval(watch, 1000);
 
 function change(event) {
   let countryy = event.target.value;
-  place.innerHTML = countryy;
-  let daily = moment().tz(countryy).format("MMMM Do, YYYY");
-  let timely = moment().tz(countryy).format("HH:mm:ss A");
-  day.innerHTML = daily;
-  time.innerHTML = timely;
+  if (country === "current") {
+    place.innerHTML = moment().tz().guess();
+    day.innerHTML = moment().tz().guess().format("MMMM Do, YYYY");
+    time.innerHTML = moment().tz().guess().format("HH:mm:ss A");
+  } else {
+    place.innerHTML = countryy;
+    let daily = moment().tz(countryy).format("MMMM Do, YYYY");
+    let timely = moment().tz(countryy).format("HH:mm:ss A");
+    day.innerHTML = daily;
+    time.innerHTML = timely;
+  }
 }
 countries.addEventListener("change", change);
