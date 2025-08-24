@@ -27,3 +27,8 @@ footer {
 body {
   background-color: beige;
 }
+.time1 {
+  margin-top: 40px;
+  font-weight: 800;
+  font-size: 25px;
+}

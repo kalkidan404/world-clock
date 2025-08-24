@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Your Page Title</title>
     <meta name="description" content="Short description of this page." />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -18,17 +20,17 @@
         <form class="countries">
           <select class="country">
             <option value="">select city</option>
-            <option value="">NewYork</option>
-            <option value="">aukhland</option>
-            <option value="">london</option>
+            <option value="America/NewYork">NewYork</option>
+            <option value="Pacific/Auckland">aukhland</option>
+            <option value="Europe/London">london</option>
           </select>
         </form>
 
         <div>
           <div class="date">
             <div>
-              <h2>Los angeles</h2>
-              <p>august 15th 2022</p>
+              <h2 class="place">Los angeles</h2>
+              <p class="day">august 15th 2022</p>
             </div>
             <p class="time">1:48:15<sup>AM</sup></p>
           </div>
@@ -37,35 +39,15 @@
         <div>
           <div class="date">
             <div>
-              <h2>Sydney</h2>
-              <p>august 15th 2022</p>
+              <h2 id="sydney">Sydney</h2>
+              <p class="day1">august 15th 2022</p>
             </div>
-            <div class="time">1:48:15<sup>AM</sup></div>
-          </div>
-        </div>
-        <hr />
-        <div>
-          <div class="date">
-            <div>
-              <h2>Tokyo</h2>
-              <p>august 15th 2022</p>
-            </div>
-            <div class="time">1:48:15<sup>AM</sup></div>
-          </div>
-        </div>
-        <hr />
-        <div>
-          <div class="date">
-            <div>
-              <h2>paris</h2>
-              august 15th 2022
-            </div>
-            <div class="time">1:48:15<sup>AM</sup></div>
+            <div class="time1">1:48:15<sup>AM</sup></div>
           </div>
         </div>
       </main>
     </div>
-    <script defer src="app.js"></script>
+    <script src="app.js"></script>
     <footer>
       <p>
         this is coded by kalkidan and is in
