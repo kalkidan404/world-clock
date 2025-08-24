@@ -32,3 +32,7 @@ body {
   font-weight: 800;
   font-size: 25px;
 }
+.date1 {
+  display: flex;
+  justify-content: space-between;
+}

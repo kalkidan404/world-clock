@@ -5,6 +5,7 @@ let day = document.querySelector(".day");
 let time = document.querySelector(".time");
 let day1 = document.querySelector(".day1");
 let time1 = document.querySelector(".time1");
+let date1 = document.querySelector(".date1");
 function watch() {
   let zone = moment().tz("America/Los Angeles").format("MMMM Do, YYYY");
   day.innerHTML = zone;
@@ -19,10 +20,11 @@ setInterval(watch, 1000);
 
 function change(event) {
   let countryy = event.target.value;
-  if (country === "current") {
-    place.innerHTML = moment().tz().guess();
-    day.innerHTML = moment().tz().guess().format("MMMM Do, YYYY");
-    time.innerHTML = moment().tz().guess().format("HH:mm:ss A");
+  if (countryy == "current") {
+    let places = moment.tz.guess();
+    place.innerHTML = places;
+    day.innerHTML = moment().tz(places).format("MMMM Do, YYYY");
+    time.innerHTML = moment().tz(places).format("HH:mm:ss A");
   } else {
     place.innerHTML = countryy;
     let daily = moment().tz(countryy).format("MMMM Do, YYYY");
@@ -30,5 +32,6 @@ function change(event) {
     day.innerHTML = daily;
     time.innerHTML = timely;
   }
+  date1.innerHTML = "";
 }
 countries.addEventListener("change", change);
